@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>MaxPatwardhan.github.io - Advanced Electronics and Control Systems in Webcam Design</title>
+    <link rel="icon" type="image/png" href="images/personal/icon.png">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <a href="index.html" class="logo">Home</a>
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li><a href="index.html">Projects</a></li>
+                <li><a href="about.html">About Me</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="https://github.com/MaxPatwardhan" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                <li><a href="https://www.linkedin.com/in/maxwell-patwardhan" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <div id="main">
+
+            <!-- Project Introduction -->
+            <section class="post">
+                <header class="major">
+                    <h1>Advanced Electronics and Control Systems in Webcam Design</h1>
+                    <p>This project delves into the intricacies of integrating electronics and control systems to create a responsive webcam with real-time streaming capabilities. It covers power management, data communication, encoder integration, and system-level control mechanisms, showcasing robust design methodologies and implementation strategies.</p>
+                </header>
+            </section>
+            <!DOCTYPE html>
+            <div class="grid">
+                <img src="images/rds/12vBuck.png">
+                <img src="images/rds/5vBuck.png">
+                <img src="https://source.unsplash.com/400x400?valley">
+                <img src="https://source.unsplash.com/400x400?beach">
+                <img src="https://source.unsplash.com/400x400?ocean">
+                <img src="https://source.unsplash.com/400x400?water">
+                <img src="https://source.unsplash.com/400x400?trees">
+                <img src="https://source.unsplash.com/400x400?lake">
+                <img src="https://source.unsplash.com/400x400?cliff">
+              </div>
+
+
+            <!-- Power Board -->
+            <section id="power-board">
+                <h2>Power Board Design and Implementation</h2>
+                <p>The power board is the backbone of the webcam system, ensuring that all components receive stable, noise-free, and reliable power. It includes several voltage regulation circuits to handle the varying power requirements of the microcontroller, camera, and communication modules. The design prioritizes efficiency, thermal stability, and fault protection.</p>
+
+                <h3>Design Goals</h3>
+                <p>The power board was designed to achieve the following objectives:</p>
+                <ul>
+                    <li>Provide stable power supplies at 12V and 5V for various subsystems.</li>
+                    <li>Minimize power losses using high-efficiency buck converters.</li>
+                    <li>Implement safety mechanisms such as reverse polarity protection and overcurrent shutdown.</li>
+                    <li>Enable real-time fault diagnostics through status LEDs and test points.</li>
+                </ul>
+
+                <h3>12V Regulation Circuit</h3>
+                <p>The 12V regulation circuit is based on the LM2675 step-down (buck) converter, capable of handling input voltages from 6.5V to 40V. Key design elements include:</p>
+                <ul>
+                    <li>A 150µH inductor to smooth out current variations and reduce ripple.</li>
+                    <li>47µF electrolytic capacitors for input and output filtering, ensuring stable voltage levels.</li>
+                    <li>A fast-recovery Schottky diode to protect against back EMF and transient spikes.</li>
+                </ul>
+                <p>This circuit powers high-current peripherals, such as actuators and high-power LEDs, with minimal heat generation and high efficiency (up to 92%). Thermal pads and vias are incorporated into the PCB design to enhance heat dissipation.</p>
+
+                <h3>5V Regulation Circuit</h3>
+                <p>The 5V regulation circuit uses the MAXM17572 module, known for its compact size and high efficiency. The design focuses on providing a clean power supply for sensitive electronics such as the microcontroller, sensors, and communication modules. Features include:</p>
+                <ul>
+                    <li>Bypass capacitors to suppress high-frequency noise.</li>
+                    <li>A feedback resistor network to maintain precise voltage regulation.</li>
+                    <li>Integrated thermal shutdown and fault protection circuitry.</li>
+                </ul>
+                <p>With a wide input voltage range and low dropout characteristics, this circuit is ideal for maintaining stable 5V power under varying load conditions.</p>
+
+                <h3>Protection Features</h3>
+                <p>To ensure system safety and reliability, the power board includes several protection mechanisms:</p>
+                <ul>
+                    <li><strong>Polyfuses:</strong> Automatically limit current in case of overload, protecting sensitive components.</li>
+                    <li><strong>Reverse Polarity Protection:</strong> Prevents damage due to incorrect power supply connections using a Schottky diode in series.</li>
+                    <li><strong>Emergency Stop (E-Stop):</strong> Allows for immediate shutdown of all power supplies in case of critical failures.</li>
+                </ul>
+            </section>
+
+            <!-- Data Board -->
+            <section id="data-board">
+                <h2>Data Board and Communication Hub</h2>
+                <p>The data board serves as the central communication hub for the webcam system. It integrates a Teensy microcontroller, CAN transceiver, and communication interfaces to manage data exchange between the camera module, WiFi module, and control subsystems.</p>
+
+                <h3>CAN Transceiver Circuit</h3>
+                <p>The CAN transceiver, based on the MCP2561 chip, enables reliable communication over the CAN bus. This fault-tolerant protocol is ideal for handling noise-prone environments. The design includes:</p>
+                <ul>
+                    <li>TVS diodes to protect against voltage spikes.</li>
+                    <li>Filtering capacitors to reduce electromagnetic interference (EMI).</li>
+                    <li>Termination resistors to ensure signal integrity.</li>
+                </ul>
+                <p>The transceiver operates at a baud rate of up to 1Mbps, supporting real-time data exchange between the microcontroller and peripherals.</p>
+
+                <h3>System Status Indication</h3>
+                <p>The data board features RGB LEDs to provide visual feedback on system operation. Each LED represents a specific subsystem state, such as motor driver status, network connectivity, or error conditions. This enables quick diagnostics and troubleshooting during testing and deployment.</p>
+
+                <h3>Peripheral Interfaces</h3>
+                <p>The board includes multiple JST connectors for seamless integration with external devices. These connectors are designed to handle both data and power, simplifying the wiring and improving reliability.</p>
+            </section>
+
+            <!-- Encoder Boards -->
+            <section id="encoder-boards">
+                <h2>Encoder Boards for Precision Feedback</h2>
+                <p>The encoder boards play a critical role in providing high-resolution positional feedback for precise control. Each board integrates an AS5047P magnetic encoder, known for its robustness and accuracy in rotary position sensing.</p>
+
+                <h3>Key Features</h3>
+                <ul>
+                    <li>12-bit resolution for precise angle measurements.</li>
+                    <li>SPI and PWM output options for flexible integration.</li>
+                    <li>On-axis design to minimize alignment errors.</li>
+                    <li>Noise filtering capacitors to ensure clean signal transmission.</li>
+                </ul>
+                <p>These boards are designed for easy installation and maintenance, with Molex connectors providing secure and reliable electrical connections.</p>
+            </section>
+
+            <!-- Control System -->
+            <section id="control-system">
+                <h2>Control System and Firmware</h2>
+                <p>The control system integrates all hardware components into a cohesive unit, managed by the Teensy microcontroller. Custom firmware was developed to handle camera control, data processing, and communication with the WiFi module.</p>
+
+                <h3>Startup Diagnostics</h3>
+                <p>Before operation, the system performs a series of diagnostics to verify the integrity of all components. This includes:</p>
+                <ul>
+                    <li>Power-on self-tests for the microcontroller and peripherals.</li>
+                    <li>Communication tests over the CAN bus and SPI interfaces.</li>
+                    <li>Verification of encoder feedback signals and motor driver status.</li>
+                </ul>
+
+                <h3>Safety Features</h3>
+                <p>To ensure safe operation, the control system includes multiple layers of protection:</p>
+                <ul>
+                    <li><strong>Over-temperature Shutdown:</strong> Monitors the temperature of critical components and shuts down the system if thresholds are exceeded.</li>
+                    <li><strong>Position and Velocity Limits:</strong> Implements both soft and hard limits to prevent mechanical damage.</li>
+                    <li><strong>Emergency Stop (E-Stop):</strong> Provides a manual override for immediate system shutdown.</li>
+                </ul>
+            </section>
+
+            <!-- Documentation Links -->
+            <section>
+                <h2>Technical Documentation</h2>
+                <p>For further details, refer to the following resources:</p>
+                <ul>
+                    <li><a href="firmware_design.pdf" target="_blank">Firmware Design Documentation</a></li>
+                    <li><a href="pcb_layout.pdf" target="_blank">PCB Layouts and Schematics</a></li>
+                    <li><a href="final_documentation.pdf" target="_blank">Comprehensive Project Documentation</a></li>
+                </ul>
+            </section>
+
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <section>
+                <h3>Contact</h3>
+                <p>Email: <a href="mailto:maxwellpatwardhan@gmail.com">maxwellpatwardhan@gmail.com</a></p>
+            </section>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script defer src="assets/js/lightbox.js"></script>
+</body>
+</html>

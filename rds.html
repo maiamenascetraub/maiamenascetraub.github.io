@@ -1,0 +1,628 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Haptic/Robot Telemanipulation System</title>
+    <link rel="icon" type="image/png" href="images/personal/icon.png">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <a href="index.html" class="logo">Home</a>
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li><a href="index.html">Projects</a></li>
+
+                <li><a href="elements.html">About Me</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="https://github.com/MaxPatwardhan" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                <li><a href="https://www.linkedin.com/in/maxwell-patwardhan" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+            </ul>
+        </nav>
+
+        <div id="myPopup" class="popup">
+            <div class="popup-content">
+              <span class="close-button">&times;</span>
+            <h3>Not so good a listener, are you?</h3>
+            <p>
+                Or you have a distaste for authority. Either way, I respect it. <br>
+                Enjoy your sub-optimal browsing experience 😉
+            </p>
+            </div>
+          </div> 
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Post -->
+            <section class="post">
+                <header class="major">
+                    <h2>Haptic/Robot Telemanipulation System</h2>
+                    <h3>Argonne National Laboratory and Northwestern University</h3>
+                    <p>Selective Graduate Capstone Project; January 2024 - May 2024</p>
+				</header>
+
+                
+                <h2>Background</h2>
+                    <p>
+                        This fast-paced project, developed as part of Northwestern University's selective capstone program in collaboration with Argonne National Laboratory, 
+                        focused on designing and implementing a sophisticated haptic-robot telemanipulation system. Argonne National Laboratory desired a system that would allow 
+                        their chemists to remotely work with radioactive materials, necessitating a highly precise-yet-strong haptic/robot system. Our solution enables users to control a robotic finger and thumb
+                        using a haptic exoskeleton comprised of a finger and thumb. I drove the rapid, full-stack design and development of the project's electronics, ultimately providing a highly reliable and easily integrable solution.
+                    </p>
+                    <h2>Image Gallery</h2>
+                    <div class="box alt">
+                       <div class="row gtr-50 gtr-uniform">
+                           <div class="col-4">
+                               <span class="image fit">
+                                   <img src="images/rds/mechanical/hfinger.png" alt="" class="gallery-item" data-description="Model of Haptic Finger" />
+                                   <p class="caption">Haptic Finger</p>
+                               </span>
+                           </div>
+                           <div class="col-4">
+                               <span class="image fit">
+                                   <img src="images/rds/mechanical/rthumb.png" alt="" class="gallery-item" data-description="Model of Robot Thumb" />
+                                   <p class="caption">Robot Thumb</p>
+                               </span>
+                           </div>
+
+                           <div class="col-4">
+                               <span class="image fit">
+                                   <img src="images/rds/mechanical/rfinger.png" alt="" class="gallery-item" data-description="Model of Robot Finger" />
+                                   <p class="caption">Robot Finger</p>
+                               </span>
+                           </div>
+                           <div class="col-4">
+                               <span class="image fit">
+                                   <img src="images/rds/mechanical/thumb.png" alt="" class="gallery-item" data-description="Model of Haptic Thumb" />
+                                   <p class="caption">Haptic Thumb</p>
+                               </span>
+                           </div>
+                           <div class="col-4">
+                               <span class="image fit">
+                                   <img src="images/rds/power/pwrZestFEST.png" alt="" class="gallery-item" data-description="Power regulation and distribution PCB a.k.a the 'Power Board'" />
+                                   <p class="caption">Power Board</p>
+                               </span>
+                           </div>
+                           <div class="col-4">
+                               <span class="image fit">
+                                   <img src="images/rds/power/otherData.png" alt="" class="gallery-item" data-description="Communication and control PCB a.k.a the 'Data Board'" />
+                                   <p class="caption">Data Board</p>
+                               </span>
+                           </div>
+                           <!-- Add more images as needed -->
+                       </div>
+                   </div>
+                   
+                   <!-- Lightbox -->
+                   <div id="lightbox" class="lightbox">
+                       <div class="lightbox-content">
+                           <img id="lightbox-image" src="" alt="Enlarged view" />
+                           <p id="lightbox-description" class="description"></p>
+                           <span id="lightbox-close">&times;</span>
+                       </div>
+                   </div>
+
+                   <div class="box alt">
+                      <div class="row gtr-50 gtr-uniform">
+                          <div class="col-6">
+                              <span class="image fit">
+                                  <img src="images/rds/mechanical/rbot.jpg" alt="" class="gallery-item" data-description="Pictured with robot thumb  on top, robot finger on bottom" />
+                                  <p class="caption">Integrated Robot Devices</p>
+                              </span>
+                          </div>
+                          <div class="col-6">
+                              <span class="image fit">
+                                  <img src="images/rds/mechanical/haptic.jpg" alt="" class="gallery-item" data-description="I think you can surmise which is which 😉" />
+                                  <p class="caption">Integrated Haptic Devices</p>
+                              </span>
+                          </div>
+
+
+                      </div>
+                  </div>
+                  
+                  <!-- Lightbox -->
+                  <div id="lightbox" class="lightbox">
+                      <div class="lightbox-content">
+                          <img id="lightbox-image" src="" alt="Enlarged view" />
+                          <p id="lightbox-description" class="description"></p>
+                          <span id="lightbox-close">&times;</span>
+                      </div>
+                  </div>
+
+                    <div>
+                        <h2>System Overview</h2>
+                            <p> 
+                                Our team meticulously designed the mechanical, electrical, and software components of this project within just five months, ultimately developing a novel approach 
+                                to human-robot devices that offers distinct advantages over existing systems. Unlike other haptic or robotic hand systems that struggle to accurately translate forces 
+                                between the robot and the user—often causing rigid objects grasped by the robot to feel squishy to the operator—our design ensures precise force feedback. This 
+                                precision is crucial when operators need to work with delicate equipment to manipulate small objects. <br>
+        
+                                Traditional power transfer solutions fall short in this application: gear-train systems exhibit noticeable backlash, linkages are overly complex and hinder a low-profile 
+                                design, and pneumatic or hydraulic systems cannot match the force exerted by the human hand. To overcome these challenges, we chose a cable-driven design powered by 
+                                brushless DC motors positioned near the operator's palm. This approach eliminates system play while maintaining a slender and robust mechanical structure. The use of 
+                                cables enabled us to focus on a high-gain controller, providing operators with an accurate representation of the robot’s interactions.<br>
+                                
+                                The system comprises distinct haptic and robotic components for both fingers and thumbs, each featuring two actuated degrees of freedom and a third passive degree of 
+                                freedom. This configuration allows for natural and precise motion while ensuring the design remains feasible within the project’s timeframe. <br> 
+                                
+                                I developed a modular electrical system for these robotic and haptic devices, creating three different PCBs to manage power, communication, and control for each subsystem. The 'power board' 
+                                supplies and regulates power across four distinct domains, ensuring stable voltage with multiple user and system protections. The 'data board' supports real-time communication 
+                                through a dual CAN bus architecture, controlled by a Teensy microcontroller and equipped with fault-tolerant transceivers for both intra-system and inter-system communication. 
+                                High-resolution magnetic encoders deliver essential feedback for motion control, while integrated safety mechanisms, including emergency stops and system monitoring, protect both 
+                                the operator and the hardware. 
+                            </p>
+                    </div>
+                <h2>Demonstration</h2>
+                    <div class="video-container" style="margin-top: 30px; margin-bottom: 60px;">
+                        <video controls autoplay loop muted playsinline>
+                            <source src="images/rds/highlight.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                
+                <hr />
+
+                <h2 style="text-align: center; font-size: 2.5rem; " ><u>Electrical System</u></h2>
+                <h2>Power Board</h2>
+                <div class="box alt">
+                    <div class="row gtr-50 gtr-uniform">
+                        <div class="col-4">
+                            <span class="image fit">
+                                <img src="images/rds/power/IMG_0840.jpg" alt="" class="gallery-item" data-description="A fully soldered board" />
+                                <p class="caption">Soldered Power Board</p>
+                            </span>
+                        </div>
+                        <div class="col-4">
+                            <span class="image fit">
+                                <img src="images/rds/power/pwrL.png" alt="" class="gallery-item" data-description="Power Board Layout (ground planes not shown)" />
+                                <p class="caption">Power Board Layout (Ground Planes Not Pictured)</p>
+                            </span>
+                        </div>
+
+                        <div class="col-4">
+                            <span class="image fit">
+                                <img src="images/rds/schematics/pwrS.png" alt="" class="gallery-item" data-description="Power Board Schematic" />
+                                <p class="caption">Power Board Schematic Capture</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Lightbox -->
+                <div id="lightbox" class="lightbox">
+                    <div class="lightbox-content">
+                        <img id="lightbox-image" src="" alt="Enlarged view" />
+                        <p id="lightbox-description" class="description"></p>
+                        <span id="lightbox-close">&times;</span>
+                    </div>
+                </div>
+                <ul>
+                    <ul style="font-size: 1.1rem;"><strong>Functions:</strong>
+                        <ul style="font-size: 1rem;">
+                            <li>Supplies all system motors with a maximum continuous power of <b>72 Watts</b>, with an estimated peak of <b>~200 Watts</b> (at <b>24VDC</b>)</li>
+                            <li>Provides stable power to all motor controllers, sensors, and microprocessors at <b>3.3V</b>, <b>5V</b>, and <b>12V</b></li>
+                            <li>Ensures operator and system safety with passive shutdown</li>
+                            <li>Ensures safe power delivery by incorporating protection mechanisms such as overcurrent and reverse polarity protection.</li>
+                        </ul>
+                    </ul>
+                    <ul style="font-size: 1.1rem;"><strong>Design Features:</strong>
+                        <ul style="font-size: 1rem;">
+                            <li><strong>Power Integrity</strong> Ground-plane is used minimally to maximize current return path. Filtering passives are properly selected based on present frequencies and vias are kept short. Signals on different planes cross orthogonally</li>
+                            <li><strong>Ample Connectivity:</strong> Screw terminals and shrouded XT-60 connectors allow for easy connectivity during set-up and debugging.</li>
+                            <li><strong>Robust Component Selection</strong> Switching regulation circuits are designed based off of manufacturer guidelines. Regulator circuits are designed to mitigate input voltage spikes with a factor of safety of 2.5 </li>
+                            <li><strong>Easy Assembly:</strong> Common, cheap passive components are used. The boards silkscreen lists each component which can be referenced in the BOM. The board can be easily assembled via reflow with the use of a stencil.</li>
+                            <li><strong>Safety &amp; Reliability:</strong> Operator and system are protected from many common threats with the inclusion of passive safety systems (see <i>'Threats'</i> table below).</li>
+                            <li><strong>Real-Time Indicators:</strong> RGB LEDs display system status, such as communication errors or operational readiness.</li>
+                        </ul>
+                    </ul>
+
+                </ul>
+
+                <div class="row aln-top gtr-uniform">
+                                        <!-- List -->
+                    <div class="col-7">
+                        <ul class="adjacent-list" style ="width: 100%;">
+                            <li style="font-size: 1.1rem;"><strong>Circuit Subsystems:</strong>
+                                <ul style="font-size: 1rem;">
+                                    <li><strong>24 Volt Domain:</strong> Input supply voltage to board. Routed to both regulator circuits as well as through electronic E-Stops to power motors &amp; motor controllers</li>
+                                    <li><strong>12 Volt Buck Regulator:</strong> Designed to provide stable power to medium-power subsystems, such as the motor controller shielded CAN network. It utilizes a 
+                                                                                <a href="https://www.digikey.com/en/products/detail/texas-instruments/LM2675MX-12-NOPB/366906">Texas Instruments switching buck regulator</a> to 
+                                                                                handle an input voltages range of <b>4.5V</b> to <b>60V</b>, ensuring a smooth and denoised output of up to <b>1A</b> suitable for operation-critical components</li>
+                                    <li><strong>5 Volt Buck Regulator:</strong> Supplies low-voltage power to sensors, microcontroller, and encoders. It employs an 
+                                                                                <a href="https://www.mouser.com/ProductDetail/Analog-Devices-Maxim-Integrated/MAXM17572AMC%2BT?qs=Jm2GQyTW%2Fbjkm%2FUypR0kew%3D%3D">Analog Devices/Maxim Integrated switching buck regulator</a>
+                                                                                 to regulate an input voltages range of <b>4.5V</b> to <b>60V</b> with a maximum output of <b>1A</b>, catering to sensitive and low-power electronic peripherals.</li>
+                                    <li><strong>Digital E-Stop System:</strong> Controlled by I/O pins from the Data board, 3 transistors manage SPST Form A E-Stop Relays. Power to the motors can instantly be cut-off if the microcontrollers detect that the 
+                                                                                operator's or system's safety is in jeopardy. </li>
+                                    <li><strong>Use Indicators:</strong> LEDs indicate the operating state of each circuit to provide real-time feedback.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Table -->
+                    <div class="col-5">
+                        <div class="table-stack">
+                            <table class="compact-table">
+                                <thead>
+                                    <tr><th>Physical Characteristic</th><th>Value</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><strong>Layers</strong></td><td>2</td></tr>
+                                    <tr><td><strong>Dimensions</strong></td><td>75mm &times; 55mm</td></tr>
+                                    <tr><td><strong>Thickness</strong></td><td>1.6mm</td></tr>
+                                    <tr><td><strong>Copper Thickness</strong></td><td>4 Oz./ft<sup>2</sup></td></tr>
+                                    <tr><td><strong>Substrate</strong></td><td>FR-4</td></tr>
+                                    <tr><td><strong>Track Spacing</strong></td><td>13 mil</td></tr>
+                                    <tr><td><strong>Vias</strong></td><td>Tented, 0.3mm</td></tr>
+                                </tbody>
+                            </table>
+                            <table class="compact-table">
+                                <thead>
+                                    <tr><th>Threat</th><th>Mitigation Feature</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><strong>Current Surge</strong></td><td>PPTC Thermistors</td></tr>
+                                    <tr><td><strong>Reverse Polarity</strong></td><td>Reverse Polarity Diodes &amp; Shrouded Connectors</td></tr>
+                                    <tr><td><strong>Supply Fault</strong></td><td>Form A Relays</td></tr>
+                                    <tr><td><strong>MCU Disconnect</strong></td><td>Form A Relays</td></tr>
+                                    <tr><td><strong>Back-EMF</strong></td><td>Shrouded Motor Controller</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div> 
+                <h2 style="text-align: center; font-size: 1.5rem; " >Prototype vs. Final Design</h2>
+
+
+
+                <div class="box alt">
+                    <div class="row gtr-50 gtr-uniform">
+                        <div class="col-12">
+                            <span class="image fit">
+                                <img src="images/rds/power/pwrCompare.JPG" alt="" class="gallery-item" data-description="Final Design vs. Prototype" />
+                                <p class="caption">Final Design vs. Prototype</p>
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+                
+                <!-- Lightbox -->
+                <div id="lightbox" class="lightbox">
+                    <div class="lightbox-content">
+                        <img id="lightbox-image" src="" alt="Enlarged view" />
+                        <p id="lightbox-description" class="description"></p>
+                        <span id="lightbox-close">&times;</span>
+                    </div>
+                </div>
+
+                <div class="image-comparison">
+
+                    <div class="image-container">
+                        <img src="images/rds/power/pwrL.png" alt="After" class="image-right gallery-item" data-description="Final Power Board Layout">
+                        <div class="caption">Final Power Board Design</div>
+                    </div>
+ 
+                    <div class="arrow"><i class="fas fa-arrow-left"></i></div>
+
+                    <div class="image-container">
+                        <img src="images/rds/power/oldpwr.png" alt="Breakout Boards" class="image-left gallery-item" data-description="Initial Prototype">
+                        <div class="caption">Prototype Power Board Layout</div>
+                    </div>
+
+                </div>
+                <!-- Lightbox -->
+                <div id="lightbox" class="lightbox">
+                    <div class="lightbox-content">
+                        <img id="lightbox-image" src="" alt="Enlarged View">
+                        <p id="lightbox-description" class="description"></p>
+                        <span id="lightbox-close">&times;</span>
+                    </div>
+                </div>
+                <br>
+                <div style="clear: both;"></div>
+<!-------------------------------------------------------------------------------------------------->
+                <h2>Data Board</h2>
+                <div class="box alt">
+                    <div class="row gtr-50 gtr-uniform">
+                        <div class="col-4">
+                            <span class="image fit">
+                                <img src="images/rds/data/IMG_0843.jpg" alt="" class="gallery-item" data-description="A fully soldered board (Teensy Microcontroller not shown)" />
+                                <p class="caption">Soldered Board</p>
+                            </span>
+                        </div>
+                        <div class="col-4">
+                            <span class="image fit">
+                                <img src="images/rds/data/dataL.png" alt="" class="gallery-item" data-description="Data Board Layout (ground planes not shown)" />
+                                <p class="caption">Board Layout (Ground Planes Not Pictured)</p>
+                            </span>
+                        </div>
+
+                        <div class="col-4">
+                            <span class="image fit">
+                                <img src="images/rds/schematics/dataS.png" alt="" class="gallery-item" data-description="Data Board Schematic" />
+                                <p class="caption">Electrical Schematic</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Lightbox -->
+                <div id="lightbox" class="lightbox">
+                    <div class="lightbox-content">
+                        <img id="lightbox-image" src="" alt="Enlarged view" />
+                        <p id="lightbox-description" class="description"></p>
+                        <span id="lightbox-close">&times;</span>
+                    </div>
+                </div>
+
+                <div class="row aln-top gtr-uniform">
+                    <!-- List -->
+                    <div class="col-7">
+                        <ul class="adjacent-list">
+                            <ul style="font-size: 1.1rem;"><strong>Functions:</strong>
+                                <ul style="font-size: 1rem;">
+                                    <li>Provides <b>2 SPI ports</b>, <b>4 UART ports</b>, and <b>3 CAN busses</b> for connection to the microcontroller to support multiple types of peripherals</li>
+                                    <li>Directly commands subsystems motor controllers</li>
+                                    <li>Communicates between subsystems too coordinate movement between all 4 devices via an external CAN Bus</li>
+                                    <li>Controls activation of each motor E-Stop by direct interface with NPN BJT's on the power board</li>
+                                    <li>Connects Teensy Microcontroller to peripheral sensors and encoders</li>
+                                    <li>Displays system state with 3 RGB LED's</li>
+                                    <li>Provides <b>2 SPI</b>, <b>4 UART</b>, and <b>3 CAN</b> connections to the microcontroller to support multiple types of peripherals</li>
+                                </ul>
+                            </ul>
+                            <ul style="font-size: 1.1rem;"><strong>Design Features:</strong>
+                                <ul style="font-size: 1rem;">
+                                    <li><strong>Expansion Support:</strong> Contains a surplus of I/O ports so that different peripherals &amp; components can be added in future</li>
+                                    <li><strong>Signal Integrity:</strong> Controlled impedance routing for high-speed signals, ground plane is minimally interrupted, stitching vias exist throughout the board to guarantee low-impedance return path</li>
+                                    <li><strong>Filtering:</strong> Bypass Capacitors at various power and GPIO pins act as Low Pass filters for the MCU  </li>
+                                    <li><strong>High Reparability:</strong> Teensy and CAN transceivers, the two most probable chips to burn out, are implemented in socket (P-DIP) packages for easy replacement.</li>
+                                    <li><strong>Easy Debugging:</strong> Onboard LEDs indicate CAN activity, Teensy Microcontroller is broken-out into headers for testing and scoping, and an onboard toggle switch allows for easy power cycling</li>
+                                    <li><strong>Compact Layout:</strong> Optimized for minimal space without sacrificing functionality</li>
+                                </ul>
+                            </ul>
+                        </ul>
+                    </div>
+                    <!-- Table -->
+                    <div class="col-5">
+                        <div class="table-stack">
+                            <table class="compact-table">
+                                <thead>
+                                    <tr><th>Physical Characteristic</th><th>Value</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><strong>Layers</strong></td><td>2</td></tr>
+                                    <tr><td><strong>Dimensions</strong></td><td>80mm &times; 55mm</td></tr>
+                                    <tr><td><strong>Thickness</strong></td><td>1.6mm</td></tr>
+                                    <tr><td><strong>Copper Thickness</strong></td><td>1 Oz./ft<sup>2</sup></td></tr>
+                                    <tr><td><strong>Substrate</strong></td><td>FR-4</td></tr>
+                                    <tr><td><strong>Minimum Track Spacing</strong></td><td>6 mil</td></tr>
+                                    <tr><td><strong>Vias</strong></td><td>Tented, 0.3mm</td></tr>
+                                </tbody>
+                            </table>
+                            <table class="compact-table">
+                                <thead>
+                                    <tr><th>Threat</th><th>Mitigation Feature</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><strong>Signal Noise</strong></td><td>Decoupling Capacitors</td></tr>
+                                    <tr><td><strong>Voltage Spikes</strong></td><td>Transient Voltage Suppressors</td></tr>
+                                    <tr><td><strong>Data Corruption</strong></td><td>Parity Check and Error Correction Protocols</td></tr>
+                                </tbody>
+                            </table>
+                    
+                        </div>
+                    </div>
+                </div>
+                <h2 style="text-align: center; font-size: 1.5rem; " >Prototype vs. Final Design</h2>
+                <div class="image-comparison">
+                    <div class="image-container">
+                        <img src="images/rds/data/dataOLD.png" alt="Breakout Boards" class="image-left gallery-item" data-description="Initial Data Board Prototype Layout">
+                        <div class="caption">Prototype Data Board Layout</div>
+                    </div>
+                    <div class="arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="image-container">
+                        <img src="images/rds/data/dataL.png    " alt="After" class="image-right gallery-item" data-description="Final Data Board Layout">
+                        <div class="caption">Final Data Board Layout</div>
+                    </div>
+                </div>
+                <!-- Lightbox -->
+                <div id="lightbox" class="lightbox">
+                    <div class="lightbox-content">
+                        <img id="lightbox-image" src="" alt="Enlarged View">
+                        <p id="lightbox-description" class="description"></p>
+                        <span id="lightbox-close">&times;</span>
+                    </div>
+                </div>
+                <br>
+                <div style="clear: both;"></div>
+<!-------------------------------------------------------------------------------------------------->
+
+                <h2>Encoder Boards</h2>
+                <div class="box alt">
+                    <div class="row gtr-50 gtr-uniform">
+                        <div class="col-3">
+                            <span class="image fit">
+                                <img src="images/rds/data/IMG_0734.jpg" alt="" class="gallery-item" data-description="A bare encoder board" />
+                                <p class="caption">Bare Encoder Board</p>
+                            </span>
+                        </div>
+                        <div class="col-3">
+                            <span class="image fit">
+                                <img src="images/rds/mechanical/f4.jpg" alt="" class="gallery-item" data-description="Encoder Board Schematic" />
+                                <p class="caption">Soldered Board Mounted to Haptic Thumb </p>
+                            </span>
+                        </div>
+                        <div class="col-3">
+                            <span class="image fit">
+                                <img src="images/rds/data/EncL.png" alt="" class="gallery-item" data-description="Encoder Board Layout (ground planes not shown)" />
+                                <p class="caption">Board Layout (Ground Planes Not Pictured)</p>
+                            </span>
+                        </div>
+
+                        <div class="col-3">
+                            <span class="image fit">
+                                <img src="images/rds/schematics/encS.png" alt="" class="gallery-item" data-description="Encoder Board Schematic" />
+                                <p class="caption">Electrical Schematic </p>
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+                                <!-- Lightbox -->
+                <div id="lightbox" class="lightbox">
+                    <div class="lightbox-content">
+                        <img id="lightbox-image" src="" alt="Enlarged view" />
+                        <p id="lightbox-description" class="description"></p>
+                        <span id="lightbox-close">&times;</span>
+                    </div>
+                </div>
+                
+                <div class="row aln-top gtr-uniform">
+                    <!-- List -->
+                    <div class="col-7">
+                        <ul class="adjacent-list">
+                            <li style="font-size: 1.1rem;">
+                                <strong>Function:</strong>
+                                <ul style="font-size: 1rem;">
+                                    <li>The encoder board uses high resolution <b>14 bit</b> hall-effect rotary encoders to measure shaft positions providing feedback via <b>SPI</b> to the MCU and motor controller. 
+                                        Four different versions of this board were designed in order to satisfy each subteam's sizing and mounting constraints. Each of the four 
+                                        boards is of a very small form factor, also the layout and circuit of each is identical.</li>
+                                </ul>
+                            </li>
+                            <li style="font-size: 1.1rem;">
+                                <strong>Design Features:</strong>
+                                <ul style="font-size: 1rem;">
+                                    <li><strong>Custom Dimensions</strong> Custom dimensions, layout, and connector configuration tailored to each subsystem</li>
+                                    <li><strong>High Precision:</strong> Supports 14 bit resolution, or 0.022&deg;</li>
+                                    <li><strong>Low Profile:</strong> Designed to fit within compact mechanical systems</li>
+                                    <li><strong>High Speed:</strong> Supports SPI clock rates up to 10MHz</li>
+                                    <li><strong>No Shielding required:</strong> Encoder is immune to external stray fields</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Table -->
+                    <div class="col-5">
+                        <div class="table-stack">
+                            <table class="compact-table">
+                                <thead>
+                                    <tr><th>Physical Characteristic</th><th>Value</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><strong>Layers</strong></td><td>2</td></tr>
+                                    <tr><td><strong>Dimensions</strong></td><td>15mm r.</td></tr>
+                                    <tr><td><strong>Thickness</strong></td><td>1.6mm</td></tr>
+                                    <tr><td><strong>Copper Thickness</strong></td><td>1 Oz./ft<sup>2</sup></td></tr>
+                                    <tr><td><strong>Substrate</strong></td><td>FR-4</td></tr>
+                                    <tr><td><strong>Track Spacing</strong></td><td>3 mil</td></tr>
+                                    <tr><td><strong>Vias</strong></td><td>Tented, 0.3mm</td></tr>
+                                </tbody>
+                            </table>
+                            <table class="compact-table">
+                                <thead>
+                                    <tr><th>Threat</th><th>Mitigation Feature</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><strong>Signal Degradation</strong></td><td>Filtering Capacitors</td></tr>
+                                    <tr><td><strong>Bad Connection</strong></td><td>Latching Molex Pico Connectors</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div style="clear: both;"></div>             
+
+
+                <h2>Bill of Materials</h2>
+                <iframe src="images/rds/BOM Electronics - Sheet1.pdf" width="100%" height="800px" title="BOM"></iframe>
+                
+                <hr />
+                <div>
+                    <h2 style="text-align: center; font-size: 2.5rem;"><u>Mechanical System</u></h2>
+                    
+                    <h2>Robot Finger</h2>
+                    <div style="text-align: center;">
+                        <img src="images/rds/mechanical/rfinger.png" alt="" style="display: block; margin: 0 auto; max-width: 60%;" />
+                    </div>
+                    <p>
+                        The robot finger subsystem is engineered to closely replicate human finger curling motions, featuring two actively actuated joints that deliver smooth, natural articulation. 
+                        Rather than relying on a traditional gear train, it uses a pulley-driven transmission with a 4:1 ratio at each joint, enhancing torque delivery while maintaining a compact profile. 
+                        High-performance Maxon EC 45 flat motors supply the requisite torque density without adding bulk. To ensure stability under load, stainless steel cables are tensioned using 
+                        simple screws and nuts, and magnetic encoders provide precise positional data for fine-tuned control. Structural components are fabricated through both water jet cutting and CNC 
+                        milling for accuracy and durability. While performance and torque efficiency meet design goals, refining linkage interfaces and streamlining the assembly process remains an ongoing priority.
+                    </p>
+                    
+                    <h2>Robot Thumb</h2>
+                    <p><span class="image right"><img src="images/rds/mechanical/rthumb.png" alt="" /></span>
+                        Similar to the robot finger, the robot thumb is tailored to replicate the dexterity and form factor of the human thumb, offering two actuated degrees of freedom to produce both 'waggle' (abduction/adduction: motion 
+                        that moves the thumb away from the palm) and 'curl' 
+                        (flexion/extension: curling or extending your thumb) motions. The 'waggle' joint operates at a 7.33:1 transmission ratio, driven by Maxon ECX Torque 22XL motors for steady, responsive motion. In contrast, the 'curl' 
+                        movement uses a 7.94:1 ratio powered by Maxon EC 45 Flat motors, chosen for their compact design and strong torque-to-size ratio. Multiple cable wraps, tensioning blocks, and 
+                        CNC-machined pulleys work together to maintain tension. High-precision machining, including turning and milling, ensures tight tolerances and 
+                        secure mechanical coupling. Similar to the finger, there are still some issues regarding tensioning which would likely be resolved by refining the pulley system and having an easier method for tensioning.
+                    </p>
+                    
+                    <h2>Haptic Finger</h2>
+                    <p><span class="image right"><img src="images/rds/mechanical/hfinger.png" alt="" /></span>
+                        The haptic finger subsystem recreates human finger dynamics, offering two actively controlled joints (MCP and PIP) plus an additional passive degree of freedom for 
+                        a more natural range of motion. Stainless steel cables, routed through machined pulleys, maintain precise motion transfer. Cables are tensioned using vented screws 
+                        and wing nuts, allowing convenient adjustments and steady performance over time. Similar to other designs Maxon ECX Torque 22XL motors drive the system and are mounted near the palm. 
+                        The motors are placed in such a way that they do not interfere with the mounting of the haptic thumb.
+                    </p>
+                    
+                    <h2>Haptic Thumb</h2>
+                    <p><span class="image left"><img src="images/rds/mechanical/thumb.png" alt="" /></span>
+                        The haptic thumb subsystem attempts to emulate the range of motion for the human thumb with only 2 driven degrees of freedom. Similar to the robot thumb it offers 'waggle' and 'curl' motions enhanced by an additional passive degree of freedom. Cable 
+                        tension is managed via a series of idler pulleys and vented fasteners to achieve smooth, consistent engagement. Maxon ECX motors drive the both the 'waggle' and 'curl' motions, and a rotating
+                        fitting allows your thumb to freely swivel within the mechanism. A flexible TPU thimble interface accommodates various thumb sizes while preserving a 
+                        secure, ergonomic fit. CNC-machined elements support a sturdy yet lightweight structure. Friction in the cable system occasionally emerges during operation, but we believe this issue could
+                        be fixed with higher tolerance pulleys, and a less complex way to tension the cables.
+                    </p>
+                </div>
+
+                <div style="clear:both"></div>
+                <hr />
+
+                <h4><a href="images/rds/rdsfinal-compressed.pdf">Final Presentation Slides Can Be Viewed Here</a></h4>
+                <h4><a href="https://github.com/NU-RDS-2024">Software GitHub Can Be Viewed Here</a></h4>
+
+            </section>
+
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <section>
+                <h3>Contact</h3>
+                <p>Email: <a href="mailto:maxwellpatwardhan@gmail.com">maxwellpatwardhan@gmail.com</a></p>
+            </section>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+	<script src="assets/js/slideshow.js"></script>
+    <script src="assets/js/lbox.js"></script>
+    <script src="assets/js/popup1.js" defer></script>
+</body>
+</html>

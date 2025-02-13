@@ -1,0 +1,253 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>MaxPatwardhan.github.io - Robotic Metamaterials Thesis</title>
+    <link rel="icon" type="image/png" href="images/personal/icon.png">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <a href="index.html" class="logo">Home</a>
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li><a href="index.html">Projects</a></li>
+
+                <li><a href="elements.html">About Me</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="https://github.com/MaxPatwardhan" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                <li><a href="https://www.linkedin.com/in/maxwell-patwardhan" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+            </ul>
+        </nav>
+        <div id="myPopup" class="popup">
+          <div class="popup-content">
+            <span class="close-button">&times;</span>
+          <h3>Not so good a listener, are you?</h3>
+          <p>
+            Or you have a distaste for authority. Either way, I respect it. <br>
+            Enjoy your sub-optimal browsing experience 😉
+          </p>
+          </div>
+          </div>
+
+        <!-- Main -->
+        <div id="main">
+            <!-- Post -->
+            <section class="post">
+                <header class="major">
+                    <h2>Robotic Metamaterial</h2>
+                    <h3><a href="https://github.com/MaxPatwardhan/multistableRoboticMetamaterial">Thesis: <i>Design and Deployment of Multistable Robotic Metamaterial</i></a></h3>
+                    <h3>In collaboration with the <a href="https://murpheylab.github.io/">Interactive and Emergent Autonomy Laboratory</a></h3>
+                      <h4>Advisor and Committee Chair: <a href="https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/murphey-todd.html">Professor Todd Murphey</a>
+                      <br>Committee Co-Chair: <a href="https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/mikhelson-ilya.html">Ilya Mikhelson</a>
+                    </h4>
+                    <p>Master's Thesis; November 2023 - June 2024</p>
+                </header>
+
+                <div class="box alt">
+                  <div class="row gtr-50 gtr-uniform">
+                      <div class="col-4">
+                          <span class="image fit">
+                              <img src="images/metamaterial/dome.jpg" alt="" class="gallery-item" data-description="" />
+                              <p class="caption">Robot in Dome Structure</p>
+                          </span>
+                      </div>
+                      <div class="col-4">
+                          <span class="image fit">
+                              <img src="images/metamaterial/zfSq.jpg" alt="" class="gallery-item" data-description="" />
+                              <p class="caption">Robot Metamaterial Sheet</p>
+                          </span>
+                      </div>
+
+                      <div class="col-4">
+                          <span class="image fit">
+                              <img src="images/metamaterial/isoRouting2.png" alt="" class="gallery-item" data-description="" />
+                              <p class="caption">Sectional CAD View</p>
+                          </span>
+                      </div>
+
+                      <!-- Add more images as needed -->
+                  </div>
+              </div>
+                                 <!-- Lightbox -->
+            <div id="lightbox" class="lightbox">
+             <div class="lightbox-content">
+                 <img id="lightbox-image" src="" alt="Enlarged view" />
+                 <p id="lightbox-description" class="description"></p>
+                 <span id="lightbox-close">&times;</span>
+             </div>
+         </div>
+
+                <p>During my thesis I developed a robotic 'metamaterial', a type of robotic media that leverages it's unique design and properties to exhibit different behaviors. 
+                    I was able to make the robot locomote, grasp, mechanically sense, and form stable 3D structures.
+                    I independently designed, integrated, and tested the mechanical, electrical, and software systems for this robot - ultimately producing my thesis on the work. In tandem with my thesis paper,
+                    I developed thorough documentation detailing the robot design, production, assembly, and control of the system, all of which can be found at the bottom of the page.</p>
+
+                <p>
+                    Put briefly: this system leverages the unique properties of compression springs in their bifurcated states and the bistable configurations of compliant mechanisms, 
+                    allowing the robot to alternate between states for specific tasks. The robot does this by actuating a servo that tugs on cables routed between other 'nodes', causing
+                    the springs to bend. The routing between two nodes is shown below:
+                </p>
+
+                <span class="image fit"><img src="images/metamaterial/interNodeDrawn.png" alt="" /></span>
+                <span class="image fit"><img src="images/metamaterial/brdTransparent.png" alt="" /></span>
+
+                <p>
+                    Multiple nodes can be connected together in a variety of configurations due to their modular design, as shown in the image above. Each driven node (driven meaning it has a processor and motor) 
+                    can be controlled over Wi-Fi, enabling the robot to perform a multitude of tasks, with its only hindrance being the onboard battery life.
+                    If you would like to know how the robot works or how it was designed in greater detail, my thesis and documentation explain very thoroughly how to make and control your own. 
+                    All project files can be <a href="https://github.com/MaxPatwardhan/multistableRoboticMetamaterial">found on my GitHub</a>.
+                </p>
+
+                
+                <h2>Grasping Task</h2>
+                <div class="video-container" style="margin-top: 50px; margin-bottom: 50px;">
+                    <video controls autoplay loop muted playsinline>
+                        <source src="images/metamaterial/Img 0964 (online-video-cutter.com).mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <section id="gallery">
+                    <div class="image-grid">
+                      <div class="image-item">
+                        <img src="images/metamaterial/GrabCone.jpg" alt="Image 1">
+                      </div>
+                      <div class="image-item">
+                        <img src="images/metamaterial/dabricky.jpg" alt="Image 2">
+                      </div>
+                     </div>
+                  </section>
+
+                  <h2>Locomotion Task</h2>
+                  <div class="video-container" style="margin-top: 50px; margin-bottom: 50px;">
+                      <video controls autoplay loop muted playsinline>
+                          <source src="images/metamaterial/Bcwj1180.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                      </video>
+                  </div>
+                  <p>The robot is capable of locomotion through with minimal open loop control. A non-uniform probability distribution determines which node will actuate, causing the centroid of the robot
+                    to locomote in the direction of the nodes which are more likely to move.
+                  </p>
+   
+
+                    <h2>Stable Structure Formation</h2>
+                    <div class="video-container" style="margin-top: 50px; margin-bottom: 50px;">
+                        <video controls autoplay loop muted playsinline>
+                            <source src="images/metamaterial/Img 0955.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <h2>Some other pretty pictures and Diagrams</h2>
+                      <div class="box alt">
+                         <div class="row gtr-50 gtr-uniform">
+                             <div class="col-4">
+                                 <span class="image fit">
+                                     <img src="images/metamaterial/profilerouting.png" alt="" class="gallery-item" data-description="" />
+                                     <p class="caption">Inter Node Cable Routing Side Profile</p>
+                                 </span>
+                             </div>
+                             <div class="col-4">
+                                 <span class="image fit">
+                                     <img src="images/metamaterial/isoRouting2.png" alt="" class="gallery-item" data-description="" />
+                                     <p class="caption">Inter Node Cable Routing Alt. View</p>
+                                 </span>
+                             </div>
+  
+                             <div class="col-4">
+                                 <span class="image fit">
+                                     <img src="images/metamaterial/nodeExploded.png" alt="" class="gallery-item" data-description="" />
+                                     <p class="caption">Exploded View</p>
+                                 </span>
+                             </div>
+                             <div class="col-4">
+                                 <span class="image fit">
+                                     <img src="images/metamaterial/cableRouting.png" alt="" class="gallery-item" data-description="" />
+                                     <p class="caption">Multiple Cables Routed</p>
+                                 </span>
+                             </div>
+                             <div class="col-4">
+                                 <span class="image fit">
+                                     <img src="images/metamaterial/assembledopen.jpg" alt="" class="gallery-item" data-description="" />
+                                     <p class="caption">Open Active Node</p>
+                                 </span>
+                             </div>
+                             <div class="col-4">
+                                 <span class="image fit">
+                                     <img src="images/metamaterial/sprungLinksExploded.png" alt="" class="gallery-item" data-description="" />
+                                     <p class="caption">Secondary Exploded View</p>
+                                 </span>
+                             </div>
+                             <!-- Add more images as needed -->
+                         </div>
+                     </div>
+                                        <!-- Lightbox -->
+                   <div id="lightbox" class="lightbox">
+                    <div class="lightbox-content">
+                        <img id="lightbox-image" src="" alt="Enlarged view" />
+                        <p id="lightbox-description" class="description"></p>
+                        <span id="lightbox-close">&times;</span>
+                    </div>
+                </div>
+    
+
+
+                <h2>Thesis Paper</h2>
+                <iframe src="assets\resume\Research_Masters_Thesis.pdf" width="100%" height="800px" title="Robotic Metamaterials Thesis" style="margin-bottom: 50px;"></iframe>
+                
+                <h2>Documentation and Assembly Guide</h2>
+                <iframe src="assets\resume\ThesisDocumentation.pdf" width="100%" height="800px" title="Robotic Metamaterials Thesis" style="margin-bottom: 50px;"></iframe>
+
+                <h2>Thesis Presentation</h2>
+                <iframe src="images/metamaterial/MastersThesisDefensePresentation_MaxwellPatwardhan.pdf" width="100%" height="800px" title="Robotic Metamaterials Thesis"></iframe>
+                
+
+                
+            </section>
+
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <section>
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <h3 style="margin: 1;">Email:</h3>
+                    <p style="margin: 1;"><a href="mailto:maxwellpatwardhan@gmail.com">maxwellpatwardhan@gmail.com</a></p>
+                </div>
+                
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <h3 style="margin: 0;">Other Pages:</h3>
+                    <ul class="icons alt" style="display: flex; gap: 10px; list-style: none; padding: 0; margin: 0;">
+                        <li><a href="https://github.com/MaxPatwardhan" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/maxwell-patwardhan" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                    </ul>
+                </div>
+            </section>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/slideshow.js"></script>
+    <script src="assets/js/popup1.js"></script>
+    <script src="assets/js/lbox.js"></script>
+
+</body>
+</html>

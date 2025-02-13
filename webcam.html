@@ -1,0 +1,322 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>MaxPatwardhan.github.io - Webcam</title>
+    <link rel="icon" type="image/png" href="images/personal/icon.png">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="Wireless Webcam project by Max Patwardhan, featuring a custom PCB, ATSAM4S8B, ESP32, and live video streaming.">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <a href="index.html" class="logo">Home</a>
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li><a href="index.html">Projects</a></li>
+                <li><a href="elements.html">About Me</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="https://github.com/MaxPatwardhan" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                <li><a href="https://www.linkedin.com/in/maxwell-patwardhan" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Project Introduction -->
+            <section class="post">
+                <header class="major">
+                    <h2>Wireless Webcam</h2>
+                    <h3>Personal Project</h3>
+                    <p>January 2024 - March 2024</p>
+                    
+                </header>
+            </section>
+
+            <!-- Overview -->
+            <section id="overview">
+                <h2>Project Overview</h2>
+                <p><span class="image right"><img src="images/esd/camZest.jpg" alt="" style="max-width: 900px; height: auto;"/></span>I created this web camera as a class project for Northwestern University, 
+                    where we were tasked with the full design and development of an embedded electronic device. My camera live-streams video to a 
+                    website at 480p at upwards of 20fps. The device has two microcontrollers on board: the <a href="https://www.microchip.com/en-us/product/atsam4s8b">ATSAM48SB</a> and the 
+                    <a href="https://www.mouser.com/ProductDetail/Espressif-Systems/ESP32-WROOM-32E-H4?qs=Li%252BoUPsLEnuUxeqGSCz%252BcA%3D%3D">ESP32-WROOM-32E</a>. The SAM chip handles image processing, while the ESP32
+                    hosts a live web server to which the video is streamed. <br>One of the primary challenges tackled was managing real-time data flow from the camera to the ESP32 module while ensuring that the system was 
+                    robust and efficient. The project required an abundance of low-level programming in C, PCB layout optimization, and mechanical design for enclosing the hardware securely. There are some design choices
+                    that I ideally would have changed, but was unable to due to the short duration of the class. These changes will be discussed below.
+                </p>
+                   
+            </section>
+
+            <!-- PCB Design -->
+            <section id="pcb">
+                <h2>Design Overview</h2>
+
+
+                <p><span class="image right"><img src="images/esd/camcomplete.jpg" alt="" style="max-width: 800px; height: auto;"/></span> The main difficulty in this project was the design of the camera PCB, which integrates the ATSAM4S8B, 
+                    the OV2640 camera module, and the ESP32 for WiFi communication. I tried to keep the circuit board compact, while still being fairly easy to assemble.</p>
+                <p>Special attention was given to routing high-speed SPI and UART signals between the MCU and the WiFi module. Separate ground planes were utilized to reduce noise, and 
+                    bypass capacitors were placed near <b>V<sub>cc</sub></b> and power pins to act as a low pass filter. The PCB includes debug headers for USART and SPI communication, allowing 
+                    real-time monitoring during firmware development.</p>
+                
+                <h2>Breakout Board Prototype</h2>
+                <div class="box alt">
+                    <div class="row gtr-50 gtr-uniform">
+                        <div class="col-4">
+                            <span class="image fit">
+                                <img src="images/esd/breakout.png" alt="" class="gallery-item" data-description="It's Labeled!" />
+                                <p class="caption">ATSAM4S8B Breakout Board Layout</p>
+                            </span>
+                        </div>
+                        <div class="col-4">
+                            <span class="image fit">
+                                <img src="images/esd/camBreakout.png" alt="" class="gallery-item" data-description="Camera Board Layout" />
+                                <p class="caption">OV2640 Shield Layout</p>
+                            </span>
+                        </div>
+                        <div class="col-4">
+                            <span class="image fit">
+                                <img src="images/esd/espbreakout.png" alt="" class="gallery-item" data-description="ESP32 Breakout Board" />
+                                <p class="caption">ESP32 Breakout Board Layout</p>
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+                                <!-- Lightbox -->
+                <div id="lightbox" class="lightbox">
+                    <div class="lightbox-content">
+                        <img id="lightbox-image" src="" alt="Enlarged view" />
+                        <p id="lightbox-description" class="description"></p>
+                        <span id="lightbox-close">&times;</span>
+                    </div>
+                </div>
+
+                <p>
+                    To test the functionality of my circuits and microcontrollers before developing a production board, I created a handful of breakout boards which would allow me to quickly assemble the system with easy
+                    points for scoping. In total, I created a breakout board for each microcontroller as well as a shield for the camera. Once the circuits were validated, these boards allowed me to begin to write my firmware
+                    for the MCU's in parallel with the design and manufacturing of the final circuit board, and I used them for the duration of the project. Below is a before and after of the breakout boards and the final 
+                    completed camera:
+                </p>
+
+
+
+                <h2 style="text-align: center; font-size: 1.5rem; " >Prototype vs. Final Design</h2>
+                <div class="image-comparison">
+                    <div class="image-container">
+                        <img src="images/esd/brkout.jpg" alt="Breakout Boards" class="image-left gallery-item" data-description="Breakout Boards">
+                        <div class="caption">Breakout Board Assembly</div>
+                    </div>
+                    <div class="arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="image-container">
+                        <img src="images/esd/camSQuar.jpg" alt="After" class="image-right gallery-item" data-description="Final Design">
+                        <div class="caption">Final Design</div>
+                    </div>
+                </div>
+   
+                <!-- Lightbox -->
+                <div id="lightbox" class="lightbox">
+                    <div class="lightbox-content">
+                        <img id="lightbox-image" src="" alt="Enlarged View">
+                        <p id="lightbox-description" class="description"></p>
+                        <span id="lightbox-close">&times;</span>
+                    </div>
+                </div>
+                
+
+                <br> <br>
+                
+
+                <div style="clear:both"></div>
+
+                <h2>Layout &amp; Schematic</h2>
+
+                <div class="box alt">
+                    <div class="row gtr-50 gtr-uniform">
+                        <div class="col-6">
+                            <span class="image fit">
+                                <img src="images/esd/eds1.png" alt="PCB Design (EagleCAD)" class="gallery-item" data-description="PCB Layout" />
+                                <p class="caption">Final Webcam Layout</p>
+                            </span>
+                        </div>
+                        <div class="col-6">
+                            <span class="image fit">
+                                <img src="images/esd/eds2.png" alt="" class="gallery-item" data-description="Probably not my prettiest, but well labeled and separated." />
+                                <p class="caption">Webcam Schematic</p>
+                            </span>
+                        </div>
+
+
+                    </div>
+                </div>
+                
+                <!-- Lightbox -->
+                <div id="lightbox" class="lightbox">
+                    <div class="lightbox-content">
+                        <img id="lightbox-image" src="" alt="Enlarged view" />
+                        <p id="lightbox-description" class="description"></p>
+                        <span id="lightbox-close">&times;</span>
+                    </div>
+                </div>
+                <div class="row aln-top gtr-uniform">
+                    <!-- List -->
+                    <div class="col-7">
+                        <ul class="adjacent-list">
+                            <ul style="font-size: 1.1rem;"><strong>Function:</strong>
+                                <ul style="font-size: 1rem;">
+                                     A wireless web camera that hosts a website and streams video at 480p at 20 frames per second 
+                                </ul>
+                            </ul>
+                            <ul style="font-size: 1.1rem;"><strong>Functional Breakdown:</strong>
+                                <ul style="font-size: 1rem;">
+                                    <li>The camera and the ATSAM4S8B MCU communicate over I<sup>2</sup>C, with pull-up resistors</li>
+                                    <li>The ESP32 and SAM4S8B are connected via both SPI and UART. UART is used for programming and reset, SPI is used to capture images taken by the SAM MCU</li>
+                                    <li>The ESP32 streams successive JPEG images to a live server via Websockets</li>
+
+                                </ul>
+                            </ul>
+                            <ul style="font-size: 1.1rem;"><strong>Design Features:</strong>
+                                <ul style="font-size: 1rem;">
+                                    <li><strong>Compact Design</strong> ATSAM4S8B and ESP32 are placed on opposite sides, minimizing trace length and reducing board area</li>
+                                    <li><strong>Signal Integrity:</strong> Controlled impedance routing for high-speed signals, ground plane is minimally interrupted, stitching vias exist throughout the board to guarantee low-impedance return path</li>
+                                    <li><strong>Filtering:</strong> Bypass Capacitors at various power and GPIO pins act as Low Pass filters for the MCU's  </li>
+                                    <li><strong>Easy Assembly</strong> Most components sit on one side of the board and can be reflow soldered, subcircuits are grouped together, diodes are all oriented the same way, and component package sizing is uniform</li>
+                                    <li><strong>Easy Debugging:</strong> Headers allow for MCU activity to easily be scoped, buttons allow a convenient method for resetting the MCU, and LED indicators display the camera state</li>
+                                </ul>
+                            </ul>
+                        </ul>
+                    </div>
+                    <!-- Table -->
+                    <div class="col-5">
+                        <div class="table-stack">
+                            <table class="compact-table">
+                                <thead>
+                                    <tr><th>Physical Characteristic</th><th>Value</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><strong>Layers</strong></td><td>2</td></tr>
+                                    <tr><td><strong>Dimensions</strong></td><td>50mm &times; 33mm</td></tr>
+                                    <tr><td><strong>Thickness</strong></td><td>1.6mm</td></tr>
+                                    <tr><td><strong>Copper Thickness</strong></td><td>1 Oz./ft<sup>2</sup></td></tr>
+                                    <tr><td><strong>Substrate</strong></td><td>FR-4</td></tr>
+                                    <tr><td><strong>Minimum Track Spacing</strong></td><td>4 mil</td></tr>
+                                    <tr><td><strong>Vias</strong></td><td>Tented, 0.3mm</td></tr>
+                                </tbody>
+                            </table>
+                            <table class="compact-table">
+                                <thead>
+                                    <tr><th>Threat</th><th>Mitigation Feature</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><strong>Signal Noise</strong></td><td>Decoupling Capacitors</td></tr>
+                                    <tr><td><strong>Parasitic Capacitance</strong></td><td>Stitching Vias, <br> Trace Spacing</td></tr>
+                                    <tr><td><strong>Data Corruption</strong></td><td>Parity Check, <br> Short Trace Length</td></tr>
+                                </tbody>
+                            </table>
+                    
+                        </div>
+                    </div>
+                </div>
+                
+
+            </section>
+
+
+            <!-- Web Interface -->
+            <section id="web">
+                <h2>Web Interface and Streaming</h2>
+                
+                <div class="box alt">
+                    <div class="row gtr-50 gtr-uniform">
+                        <div class="col-6">
+                            <span class="image fit">
+                                <img src="images/esd/itsME.jpg" alt="PCB Design (EagleCAD)" class="gallery-item" data-description="Oh hello there" />
+                                <p class="caption">Webcam Streaming!</p>
+                            </span>
+                        </div>
+                        <div class="col-6">
+                            <span class="image fit">
+                                <img src="images/esd/flowchart.png" alt="" class="gallery-item" data-description="" />
+                                <p class="caption">ATSAM4S8B Embedded Logic</p>
+                            </span>
+                        </div>
+                        <div class="col-6">
+                            <span class="image fit">
+                                <img src="images/esd/website.png" alt="PCB Design (EagleCAD)" class="gallery-item" data-description="My HTML, CSS, and JS has since improved ;)" />
+                                <p class="caption">First Video Ever Streamed</p>
+                            </span>
+                        </div>
+                        <div class="col-6">
+                            <span class="image fit">
+                                <img src="images/esd/dataflow.png" alt="" class="gallery-item" data-description="High level demonstration of dataflow" />
+                                <p class="caption">Overview of Dataflow Through System</p>
+                            </span>
+                        </div>
+
+
+                    </div>
+                </div>
+                
+                <!-- Lightbox -->
+                <div id="lightbox" class="lightbox">
+                    <div class="lightbox-content">
+                        <img id="lightbox-image" src="" alt="Enlarged view" />
+                        <p id="lightbox-description" class="description"></p>
+                        <span id="lightbox-close">&times;</span>
+                    </div>
+                </div>
+                <p>As previously mentioned, the ESP32 module acts as a web server, hosting a responsive interface for streaming captured images. 
+                    The interface features controls for starting and stopping the stream and provides real-time timestamps for captured frames. 
+                    The web interface was optimized for both desktop and mobile viewing, ensuring accessibility across platforms.
+                </p>
+
+            </section>
+ 
+ 
+            <!-- 3D-Printed Enclosure -->
+            <section id="enclosure">
+                <h2>3D-Printed Enclosure</h2>
+                <p>I designed a 3D-printed enclosure in Onshape. The case has cutouts for the camera lens, indicator LEDs, and buttons. 
+                    It also incorporates mounting options to allow the camera to be securely positioned for various use cases.</p>
+                <div style="text-align:center;">
+                    <img src="images/esd/case.png" alt="3D-Printed Enclosure" style="width:60%; margin-bottom:20px;" />
+                    <p class="caption">CAD of the 3D-printed enclosure</p>
+                </div>
+            </section>
+
+
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <section>
+                <h3>Contact</h3>
+                <p>Email: <a href="mailto:maxwellpatwardhan@gmail.com">maxwellpatwardhan@gmail.com</a></p>
+            </section>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/lbox.js"></script>
+    <script src="assets/js/popup1.js" defer></script>
+</body>
+</html>

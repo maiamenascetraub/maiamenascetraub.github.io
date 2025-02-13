@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>MaxPatwardhan.github.io - Haptic/Robot Telemanipulation System</title>
+    <link rel="icon" type="image/png" href="images/personal/icon.png">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <a href="index.html" class="logo">Home</a>
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li><a href="index.html">Projects</a></li>
+
+                <li><a href="elements.html">About Me</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="https://github.com/MaxPatwardhan" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                <li><a href="https://www.linkedin.com/in/maxwell-patwardhan" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Post -->
+            <section class="post">
+                <header class="major">
+                    <h2>Aircraft-Automatic Deployable Flight Recorder</h2>
+                    <h3>In Collaboration with Boeing Inc. and the University of Colorado Boulder</h3>
+                    <h4><a href = "https://www.colorado.edu/mechanical/team-03-airbag-automatically-deployable-flight-recorder">View the full team here</a></h4>
+                    <p>Capstone Project; September 2022 - May 2023</p>
+				</header>
+
+                <h2>Background</h2>
+                <p>
+                    Following the disappearance of Malaysian Airlines Flight Flight 370, the Federal Aviation Administration
+                    required the implementation of a safe method for securing flight data on passenger aircraft. Due to differing
+                    international policy on streaming data from aircraft, Boeing Inc. tasked our team with developing a modular
+                    flight-recorder capable of collecting, collating, and securing the data generated generated during a flight.
+                </p>
+                <span class="image fit"><img src="images/aadfr/bodyIndicator.png" alt="" /></span>
+
+                <h2>Overview of Our Solution</h2>
+                <p>
+                    The Aircraft-Automatic Deployable Flight Recorder (A-ADFR) is capable of continually storing over <b>48 hours</b> 
+                    of encrypted flight data. Its small, modular design allows it to be stored in the fuselage, wings, flight deck, the tail 
+                    of the aircraft, allowing for high redundancy. The device deploys when commanded by external control computers onboard the aircraft, 
+                    or when its internal pressure sensor reads a submerged to a depth <b>4 &plusmn; 1 meters</b>. Once deployed the A-ADFR will transmit
+                    its location data on a <b>406 MHz</b> frequency band to the COSPAS-SARSAT satellite network for over <b>72 hours</b> so that it may 
+                    be located by Search and Rescue efforts.
+                </p>
+
+                <h3>Electronic System</h3>
+                <p>
+                    My main contribution to this project was the end-to-end development and implementation of the electronic system. I designed a PCB
+                    that powers all peripheral onboard electronics, automatically switches between the aircraft and internal power supply, controls 
+                    the airbag deployment, and charges/manages the onboard Lithium Polymer battery. There is also a Raspberry Pi onboard which manages
+                    and stores the data streamed from the aircraft. The system also contains a transceiver and an antenna for the aforementioned 
+                    radio communication capabilities.
+                </p>
+
+                <h4>Design of Custom PCB</h4>
+                <div style="text-align: center;">
+                    <img src="images/aadfr/pcbCADrender.png" alt="" style="display: block; margin: 0 auto; max-width: 70%;" />
+                </div>
+                <p>
+                    <br>
+                </p>
+                <h4>PCB Functions:</h4>
+                <ol>
+                    <li>Regulates and distributes 5V DC power to onboard Raspberry Pi, sensors, and radio circuitry</li>
+                    <li>Charges and manages auxiliary battery</li>
+                    <li>Automatically alternates between aircraft power supply and auxiliary power source based upon availability</li>
+                    <li>Provides I<sup>2</sup>C Bus for all peripherals to communicate</li>
+                    <li>Control circuitry for detonating Guanidine-Nitrate chemical reaction for airbags</li>
+                </ol>
+
+                <h4>Bill of Materials</h4>
+                <span class="image fit"><img src="images/aadfr/BOM.png" alt="" /></span>
+                <h3>Housing and Airbags</h3>
+                <p>
+                    The mechanical system is comprised of a cylindrical housing and three radially-symmetric airbags. The airbags serve 
+                    multiple functions, including assisting the housing in breaking free from the debris of the crashed aircraft, enhancing 
+                    visibility for locating the device, and providing buoyancy. Within the housing there are two separate chambers, one for 
+                    electronics and one for facilitating the chemical reaction which inflates the airbags. The housing is rated to an <b>IPX8</b>
+                    waterproofing standard is also <b>self-buoyant</b>, even in the event of multiple ruptured airbags. The Airbag-to-Housing connection
+                    consists of swiveling one-way valves, letting each airbag inflate while preventing water ingress to the housing in the event of a 
+                    rupture.
+                </p>
+
+                <h2>Awards!</h2>
+                <p>Our team was voted the runner up in the People's choice award at the CU Boulder Design Expo!</p>
+                <span class="image fit"><img src="images/aadfr/breslin.JPG" alt="" /></span>
+
+                <h2>Poster</h2>
+                 <span class="image fit"><img src="images/aadfr/poster.jpg" alt="" /></span>
+
+            </section>
+
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <section>
+                <h3>Contact</h3>
+                <p>Email: <a href="mailto:maxwellpatwardhan@gmail.com">maxwellpatwardhan@gmail.com</a></p>
+            </section>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/slideshow.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>MaxPatwardhan.github.io - Jack-In-Box</title>
+    <link rel="icon" type="image/png" href="images/personal/icon.png">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <a href="index.html" class="logo">Home</a>
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li><a href="index.html">Projects</a></li>
+                <li><a href="elements.html">About Me</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="https://github.com/MaxPatwardhan" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                <li><a href="https://www.linkedin.com/in/maxwell-patwardhan" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Post -->
+            <section class="post">
+                <header class="major">
+                    <h2>Jack-In-Box Lagrangian Physics Simulation</h2>
+                    <h3><a href="https://github.com/MaxPatwardhan/jackinbox">Simulated and Visualized in Python</a></h3>
+                    <p>Personal Project; November 2023 - December 2023</p>
+                </header>
+
+                <h2>Video of Simulation:</h2>
+                <div class="video-container" style="margin-top: 50px; margin-bottom: 50px;">
+                    <video controls autoplay loop muted playsinline>
+                        <source src="images/jackinbox/jackinBox.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <h2>Background</h2>
+                <p>
+                    This project simulates a "Jack-In-Box" system using Lagrangian mechanics and symbolic mathematics. The jack resides inside a box, both influenced by gravity, 
+                    while the box also experiences sinusoidal external forces and torque. By varying parameters (such as mass, force amplitude, or moment of inertia), 
+                    we can observe different dynamic behaviors. Both the jack and the box start at rest, and their interaction is governed by the Euler-Lagrange equations derived from the system's 
+                    kinetic and potential energy.
+                </p>
+
+                <p>
+                    The external forces on the box are defined as:
+                </p>
+                <p>
+                    $$f_{y,\text{box}} = 4 m g + 0.5 k \sin(2 \pi t), \quad f_{x,\text{box}} = 0.5 k \sin(2 \pi t), \quad f_{\theta,\text{box}} = k \sin(\pi t)$$
+                </p>
+
+                <h2>Definition of Coordinate Transforms</h2>
+                <p>
+                    We represent the position and orientation of the jack and box using SE(3) transformation matrices. For planar motion, these simplify to a rotation about one axis and translations 
+                    in the plane:
+                </p>
+                <p>
+                    $$
+                    g = \begin{bmatrix}
+                    R & p \\
+                    0 & 1
+                    \end{bmatrix},
+                    \quad R \in SO(2), \quad p \in \mathbb{R}^2
+                    $$
+                </p>
+                <p style="text-align: center;">
+                    <img src="images/jackinbox/finalDiagram.jpeg" alt="" style="display: block; margin: 0 auto; max-width: 75%;" />
+                </p>
+                <p>
+                    Applying these transformations allows us to track each component (jack arms, box walls) relative to a global frame. This geometric framework underlies the subsequent dynamic analysis.
+                </p>
+
+                <h2>Simulation via Euler-Lagrange Equations</h2>
+                <p>
+                    The motion is governed by the Euler-Lagrange equations, derived from the Lagrangian \(L = T - V\), where \(T\) is kinetic and \(V\) is potential energy. For generalized coordinates \(q_i\):
+                </p>
+                <p>
+                    $$\frac{d}{dt}\frac{\partial L}{\partial \dot{q}_i} - \frac{\partial L}{\partial q_i} = F_i$$
+                </p>
+                <p>
+                    Here, \(F_i\) represents external forces. By solving these equations numerically, we obtain the trajectory of the jack and box under the influence of gravity and time-varying 
+                    sinusoidal forces.
+                </p>
+
+                <h2>Kinetic and Potential Energy of Bodies in Motion</h2>
+                <p>
+                    Each rigid body’s kinetic energy accounts for both translation and rotation, computed using a body velocity vector \(\bar{V}\) derived from \(g\) and \(\dot{g}\). If \(I\) is 
+                    the inertia matrix, then:
+                </p>
+                <p>
+                    $$T = \frac{1}{2} \bar{V}^T I \bar{V}, \quad V = 4m_1 g y_j + 4m_2 g y_b$$
+                </p>
+                <p>
+                    The jack and box have respective inertia matrices \(I_j\) and \(I_b\), and substituting these into the Euler-Lagrange equations yields a set of coupled differential equations 
+                    that describe their motion.
+                </p>
+
+                <h2>Forces, Hamiltonian, and Numerical Solutions</h2>
+                <p>
+                    External sinusoidal forces and torques are applied to the box. The Hamiltonian \(H\), representing total energy, is also computed:
+                </p>
+                <p>
+                    $$H = \sum_i \dot{q}_i \frac{\partial L}{\partial \dot{q}_i} - L$$
+                </p>
+                <p>
+                    Using the Sympy library, these symbolic equations are derived and then solved numerically. The code uses <code>lambdify</code> to convert symbolic expressions into numeric 
+                    functions for integration.
+                </p>
+
+                <h2>Implementing the Simulation in Python</h2>
+                <p>
+                    The simulation code, as shown in the Python snippet, sets up the entire problem:
+                </p>
+                <ul>
+                    <li><b>Symbolic Setup:</b> The code defines symbolic variables for positions, angles, and their derivatives \((x_j, y_j, \theta_j, x_b, y_b, \theta_b)\), along with physical parameters
+                         \((m, k, g)\). SE(3) matrices and helper functions <code>se3sym</code>, <code>calcV</code> compute body velocities and transforms.</li>
+                    <li><b>Euler-Lagrange Equations:</b> The Lagrangian \(L = T - V\) is formed, derivatives are taken, and the equations of motion are solved using <code>sym.solve</code>. 
+                        The code then generates numeric functions for \(\ddot{q}\) using <code>lambdify</code>.</li>
+                    <li><b>Integration Routine:</b> An RK-4 integrator advances the state through time. The <code>simulate</code> and <code>simPact</code> functions 
+                        repeatedly call this integrator to produce trajectories.</li>
+                </ul>
+
+                <h2>Handling Impacts</h2>
+                <p>
+                    The simulation must constantly monitor impacts between the jack and the box walls. The code sets up a set of conditions \((\phi)\) that 
+                    trigger when a jack arm touches a wall. The program checks each of the 16 possible interactions on each update frame.
+                    Upon detection, the velocities are updated to satisfy post-impact conditions, enforcing the conserved energy from the Hamiltonian.
+                </p>
+                <p>
+                    Impact equations are formed by evaluating the Hamiltonian and comparing pre- and post-impact velocities. The code defines an <code>isImpact</code> function to 
+                    detect when conditions are met and an <code>impact_update</code> function to solve for the post-impact velocities. 
+                </p>
+
+                <p>
+                    For example, if an impact is detected at a particular jack arm-to-wall interaction, the code solves a system of equations to find the updated velocities \(q_i^+\). 
+                    These updates often set certain velocity components to zero or scale them based on a restitution condition, ensuring the trajectory matches physical expectations.
+                </p>
+
+                <h2>Bringing It All Together</h2>
+                <p>
+                    Combining SE(3) transforms, the Euler-Lagrange formulation, numeric integration, and an impact-handling mechanism produces a comprehensive simulation. 
+                    By adjusting parameters, one can explore different regimes: heavy boxes, lighter jacks, stronger external forces, or frequent impacts. The final output is animated, 
+                    showing the jack bouncing inside the box as it responds to gravity and oscillating forces.
+                </p>
+
+
+            </section>
+
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <section>
+                <h3>Contact</h3>
+                <p>Email: <a href="mailto:maxwellpatwardhan@gmail.com">maxwellpatwardhan@gmail.com</a></p>
+            </section>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/slideshow.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</body>
+</html>

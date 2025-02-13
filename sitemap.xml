@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+
+<url>
+  <loc>https://maxpatwardhan.github.io/</loc>
+  <lastmod>2024-12-09T20:34:46+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://maxpatwardhan.github.io/index.html</loc>
+  <lastmod>2024-12-09T20:34:46+00:00</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://maxpatwardhan.github.io/elements.html</loc>
+  <lastmod>2024-12-09T20:34:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://maxpatwardhan.github.io/metamaterial.html</loc>
+  <lastmod>2024-12-09T20:34:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://maxpatwardhan.github.io/rds.html</loc>
+  <lastmod>2024-12-09T20:34:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://maxpatwardhan.github.io/webcam.html</loc>
+  <lastmod>2024-12-09T20:34:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://maxpatwardhan.github.io/aadfr.html</loc>
+  <lastmod>2024-12-09T20:34:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://maxpatwardhan.github.io/jackinbox.html</loc>
+  <lastmod>2024-12-09T20:34:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://maxpatwardhan.github.io/hlz.html</loc>
+  <lastmod>2024-12-09T20:34:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://maxpatwardhan.github.io/fourier.html</loc>
+  <lastmod>2024-12-09T20:34:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://maxpatwardhan.github.io/sobelFilter.html</loc>
+  <lastmod>2024-12-09T20:34:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://maxpatwardhan.github.io/images/metamaterial/MastersThesisDefensePresentation_MaxwellPatwardhan.pdf</loc>
+  <lastmod>2024-12-09T20:34:47+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://maxpatwardhan.github.io/images/rds/BOM%20Electronics%20-%20Sheet1.pdf</loc>
+  <lastmod>2024-12-09T20:34:47+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://maxpatwardhan.github.io/images/fourier/APPM_4350___Final_Group.pdf</loc>
+  <lastmod>2024-12-09T20:34:47+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>

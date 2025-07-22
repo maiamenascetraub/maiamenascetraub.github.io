@@ -141,29 +141,6 @@
                       </div>
                   </div>
 		    
-		    <div>
-                        <h2>System Overview</h2>
-                            <p> 
-                                Our team meticulously designed the mechanical, electrical, and software components of this project within just five months, ultimately developing a novel approach 
-                                to human-robot devices that offers distinct advantages over existing systems. Unlike other haptic or robotic hand systems that struggle to accurately translate forces 
-                                between the robot and the user—often causing rigid objects grasped by the robot to feel squishy to the operator—our design ensures precise force feedback. This 
-                                precision is crucial when operators need to work with delicate equipment to manipulate small objects. <br>
-        
-                                Traditional power transfer solutions fall short in this application: gear-train systems exhibit noticeable backlash, linkages are overly complex and hinder a low-profile 
-                                design, and pneumatic or hydraulic systems cannot match the force exerted by the human hand. To overcome these challenges, we chose a cable-driven design powered by 
-                                brushless DC motors positioned near the operator's palm. This approach eliminates system play while maintaining a slender and robust mechanical structure. The use of 
-                                cables enabled us to focus on a high-gain controller, providing operators with an accurate representation of the robot’s interactions.<br>
-                                
-                                The system comprises distinct haptic and robotic components for both fingers and thumbs, each featuring two actuated degrees of freedom and a third passive degree of 
-                                freedom. This configuration allows for natural and precise motion while ensuring the design remains feasible within the project’s timeframe. <br> 
-                                
-                                I developed a modular electrical system for these robotic and haptic devices, creating three different PCBs to manage power, communication, and control for each subsystem. The 'power board' 
-                                supplies and regulates power across four distinct domains, ensuring stable voltage with multiple user and system protections. The 'data board' supports real-time communication 
-                                through a dual CAN bus architecture, controlled by a Teensy microcontroller and equipped with fault-tolerant transceivers for both intra-system and inter-system communication. 
-                                High-resolution magnetic encoders deliver essential feedback for motion control, while integrated safety mechanisms, including emergency stops and system monitoring, protect both 
-                                the operator and the hardware. 
-                            </p>
-                    </div>
                 <h2>Demonstration</h2>
                     <div class="video-container" style="margin-top: 30px; margin-bottom: 60px;">
                         <video controls autoplay loop muted playsinline>
@@ -386,6 +363,31 @@
 		</div> -->
 		    
 		<h2 style="text-align: center; font-size: 2.5rem; " ><u>Electrical System</u></h2>
+
+				    <div>
+                        <h2>System Overview</h2>
+                            <p> 
+                                Our team meticulously designed the mechanical, electrical, and software components of this project within just five months, ultimately developing a novel approach 
+                                to human-robot devices that offers distinct advantages over existing systems. Unlike other haptic or robotic hand systems that struggle to accurately translate forces 
+                                between the robot and the user—often causing rigid objects grasped by the robot to feel squishy to the operator—our design ensures precise force feedback. This 
+                                precision is crucial when operators need to work with delicate equipment to manipulate small objects. <br>
+        
+                                Traditional power transfer solutions fall short in this application: gear-train systems exhibit noticeable backlash, linkages are overly complex and hinder a low-profile 
+                                design, and pneumatic or hydraulic systems cannot match the force exerted by the human hand. To overcome these challenges, we chose a cable-driven design powered by 
+                                brushless DC motors positioned near the operator's palm. This approach eliminates system play while maintaining a slender and robust mechanical structure. The use of 
+                                cables enabled us to focus on a high-gain controller, providing operators with an accurate representation of the robot’s interactions.<br>
+                                
+                                The system comprises distinct haptic and robotic components for both fingers and thumbs, each featuring two actuated degrees of freedom and a third passive degree of 
+                                freedom. This configuration allows for natural and precise motion while ensuring the design remains feasible within the project’s timeframe. <br> 
+                                
+                                I developed a modular electrical system for these robotic and haptic devices, creating three different PCBs to manage power, communication, and control for each subsystem. The 'power board' 
+                                supplies and regulates power across four distinct domains, ensuring stable voltage with multiple user and system protections. The 'data board' supports real-time communication 
+                                through a dual CAN bus architecture, controlled by a Teensy microcontroller and equipped with fault-tolerant transceivers for both intra-system and inter-system communication. 
+                                High-resolution magnetic encoders deliver essential feedback for motion control, while integrated safety mechanisms, including emergency stops and system monitoring, protect both 
+                                the operator and the hardware. 
+                            </p>
+                    </div>
+		    
                 <h2>Power Board</h2>
                 <div class="box alt">
                     <div class="row gtr-50 gtr-uniform">
